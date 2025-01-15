@@ -11,5 +11,6 @@ class Block:
         self.hash = self.calculate_hash()
     
     def calculate_hash(self):
-        pass
+        string = f"{self.index}{self.previous_hash}{self.timestamp}{self.data}{self.nonce}"
+        return hashlib.sha256(string.encode()).hexdigest()
 
