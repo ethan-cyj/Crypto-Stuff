@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*/env/
+.DS_Store
+
+#for node
+*/node_modules/
+npm-debug.log
