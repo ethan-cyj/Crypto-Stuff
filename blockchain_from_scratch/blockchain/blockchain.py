@@ -1,5 +1,5 @@
 from config import DIFFICULTY, MINING_REWARD
-from block import Block
+from blockchain import Block
 import time
 class Blockchain:
     def __init__(self):

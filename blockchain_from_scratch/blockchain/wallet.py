@@ -1,4 +1,4 @@
-from ecdsa import SigningKey, SECP256k1 # type: ignore
+from ecdsa import SigningKey, SECP256k1
 
 class Wallet:
     def __init__(self):

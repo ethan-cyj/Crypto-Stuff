@@ -1,4 +1,7 @@
-from blockchain import Blockchain, Wallet, Transaction
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from blockchain import *
 
 my_blockchain = Blockchain()
 
@@ -15,8 +18,11 @@ else:
     print("Transaction is invalid!")
 
 #mine block
-my_blockchain.mine_pending_transactions(miner_address="Miner1")
+my_blockchain.mine_pending_transactions(miner_address="Miner1") #reward goes to miner1
+
+#mine block
+my_blockchain.mine_pending_transactions(miner_address="Miner2")
 
 # Display blockchain
 for block in my_blockchain.chain:
-    print(f"Index: {block.index}, Hash: {block.hash}, Data: {block.data}")
+    print(f"Index: {block.index}, Hash: {block.hash}, Data: {block.data}\n")
